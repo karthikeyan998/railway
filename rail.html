@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartRail - Indian Railway Portal</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container"><img src="https://i.ytimg.com/vi/eHue9ug3Cy0/maxresdefault.jpg" alt="Indian Railways Logo" />
+            <h1>SmartRail - Indian Railway Portal</h1>
+        </div>
+        <nav><a href="#home">Home</a><a href="#search">Search Trains</a><a href="#book">Book Tickets</a><a href="#status">PNR Status</a><a href="#contact">Contact</a></nav>
+    </header>
+
+    <section id="home">
+        <div class="carousel-container">
+            <div class="carousel-slide" id="carousel-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSiVEDcazLk3M-VUbpogJ-rUiK1UPYlLf-kg&s" class="carousel-image" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-qo6Shkdt2RdxPZ7evRtIa218W6x3CE0rg&s" class="carousel-image" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMHJl4EK-OVt0OgTp5zQKWT9jNsmVDwvXiOQ&s" class="carousel-image" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkdgTPUwANSgmyOmNp6HfIkz0tmyffPl6Mog&s" class="carousel-image" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXx8Jr69XeFrwpQyAsFNfP1yZfSAxx-rUEow&s" class="carousel-image" />
+            </div>
+            <div class="carousel-buttons"><button class="carousel-button" onclick="prevSlide()">‹</button><button class="carousel-button" onclick="nextSlide()">›</button>
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+            </div>
+        </div>
+        <div style="margin-top: 20px; text-align: center;">
+            <iframe width="600" height="340" src="https://www.youtube.com/embed/7nhv0R7buIY" title="Indian Railways Journey Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </iframe>
+            <p style="color:#555; margin-top: 8px;">Experience the journey on Indian Railways</p>
+        </div>
+
+
+        <div id="live-time" style="text-align:center;font-size:2.4rem;margin-top:10px;color:#555;">Time: <span id="clock">--:--:--</span></div>
+        <h2>Welcome to SmartRail</h2>
+        <p>Search and book Indian Railways tickets easily.</p>
+        <div style="margin-top:15px;font-style:italic;color:#555;">
+            <p><strong>Safe Journey Quotes:</strong></p>
+            <ul>
+                <li>"May your journey be safe and your memories unforgettable."</li>
+                <li>"Travel safe, travel smart, and return with a heart full of stories."</li>
+                <li>"Wishing you a smooth journey and happy destinations."</li>
+                <li>"Safe travels and joyous adventures await you."</li>
+                <li>"Every journey brings new opportunities; travel with care."</li>
+                <li>"May the rails guide you safely to your dreams."</li>
+                <li>“From chai at every halt to the echoing train horns — may your journey through India’s soul be safe and unforgettable.”</li>
+                <li>“As you travel across the heart of India by rail, may you carry peace, return with joy, and leave behind only good vibes.”</li>
+                <li>“Let the Indian Railways show you the colors of the nation — may your journey be safe, soulful, and scenic.”</li>
+            </ul>
+        </div>
+
+    </section>
+<section id="search" style="background:#fdf6f0;">
+        <h2 style="color:#d62828;">Search Trains</h2>
+        <div class="search-box"><input type="text" id="from-search" placeholder="From Station"><input type="text" id="to-search" placeholder="To Station"><input type="date" id="date-search"><button onclick="searchTrains()">Search Trains</button></div>
+        <div id="train-list" class="train-cards"></div>
+    </section>
+
+    <section id="book">
+        <h2>Book Your Ticket</h2>
+        <form onsubmit="return bookTicket(event)"><input type="text" id="name" placeholder="Name" required><input type="number" id="age" placeholder="Age" required>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <select id="train">
+                <option value="Rajdhani Express">Rajdhani Express</option>
+                <option value="Shatabdi Express">Shatabdi Express</option>
+                <option value="Duronto Express">Duronto Express</option>
+                <option value="Karnataka Express">Karnataka Express</option>
+                <option value="Mumbai Rajdhani">Mumbai Rajdhani</option>
+            </select>
+            <button type="submit">Confirm Booking</button>
+        </form>
+        <div id="booking-confirmation"></div>
+    </section>
+
+    <section id="status">
+        <h2>Check PNR Status</h2><input type="text" id="pnr" placeholder="Enter PNR"><button onclick="checkPNR()">Check</button>
+        <div id="pnr-result"></div>
+    </section>
+
+    <section id="food-order" class="food-order-section">
+        <h2>🍽️ Order Your Meal Onboard</h2>
+        <div class="food-menu">
+            <div class="food-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPbQMgD79WJwULTkrE5C-MsHcUMyKozMq-Kw&s" alt="Veg Biryani">
+                <h3>Veg Biryani</h3>
+                <p>₹120</p><input type="number" min="1" value="1"><button>Order Now</button>
+            </div>
+            <div class="food-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ67GVT63IzbY1CzYJBBARedLBhJTHf8x7y9g&s" alt="South Indian Thali">
+                <h3>South Indian Thali</h3>
+                <p>₹150</p><input type="number" min="1" value="1"><button>Order Now</button>
+            </div>
+            <div class="food-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55u6vU0U0zGtNH14Fei7kF2TC49GlUtUhSw&s" alt="Grilled Sandwich">
+                <h3>Grilled Sandwich</h3>
+                <p>₹80</p><input type="number" min="1" value="1"><button>Order Now</button>
+            </div>
+        </div>
+    </section>
+</body>
+<section id="offers">
+    <h2 style="color:#d62828;">🎉 Exciting Ticket Offers 🎉</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
+        <div class="offer-card summer-special" data-offer="15% off on all AC class tickets booked before June 10th. Hurry, limited time offer!">
+            <h3>🚄 Summer Special <span class="badge limited-time">Limited Time</span></h3>
+            <p><strong>15% off</strong> on all AC class tickets booked before <strong>June 10th</strong>.</p>
+        </div>
+        <div class="offer-card group-booking" data-offer="Book for 4 or more passengers and get 1 ticket free! Enjoy traveling with friends or family.">
+            <h3>👥 Group Booking <span class="badge best-value">Best Value</span></h3>
+            <p>Book for <strong>4 or more passengers</strong> and get <strong>1 ticket free</strong>!</p>
+        </div>
+        <div class="offer-card student-discount" data-offer="Enjoy 10% off on every booking with valid student ID. Make your travel affordable!">
+            <h3>🎓 Student Discount <span class="badge verified-id">Verified ID</span></h3>
+            <p>Enjoy <strong>10% off</strong> on every booking with valid student ID.</p>
+        </div>
+        <div class="offer-card weekend-deal" data-offer="Get extra cashback on tickets booked for Saturday and Sunday travel. Plan your weekend trips now!">
+            <h3>🗓 Weekend Deal <span class="badge exclusive">Exclusive</span></h3>
+            <p>Get <strong>extra cashback</strong> on tickets booked for Saturday and Sunday travel.</p>
+        </div>
+        <div class="offer-card senior-citizen" data-offer="Special discounted fares for all passengers aged 60 and above. Travel comfortably and save!">
+            <h3>🧓 Senior Citizen Concession</h3>
+            <p>Special discounted fares for all passengers aged <strong>60 and above</strong>.</p>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@smartrail.in</p>
+    <p>Phone: 1800-123-4567</p>
+    <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Your Name" required />
+        <input type="email" id="contact-email" placeholder="Your Email" required />
+        <textarea id="contact-message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="confirmation-message" id="contact-confirmation"></div>
+</section>
+
+<footer>
+    <p>© 2025 SmartRail. All rights reserved.</p>
+</footer>

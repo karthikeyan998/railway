@@ -1,0 +1,398 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333
+        }
+
+        header {
+            background: #bf1e2e;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem
+        }
+
+        .logo-container img {
+            height: 60px
+        }
+
+        nav {
+            margin-top: 0.5rem
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+        }
+
+        h2 {
+            color: #bf1e2e
+        }
+
+        .carousel-container {
+            max-width: 600px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            height: 300px;
+            object-fit: cover
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            width: 100%;
+            top: 45%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box
+        }
+
+        .carousel-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px
+        }
+
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8)
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 8px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: background 0.3s
+        }
+
+        .carousel-dot.active {
+            background: #fff
+        }
+
+        .search-box input,
+        .search-box button,
+        form input,
+        form select,
+        form button,
+        #status input,
+        #status button {
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 400px
+        }
+
+        .search-box button,
+        form button,
+        #status button {
+            background: #bf1e2e;
+            color: #fff;
+            cursor: pointer;
+            border: none
+        }
+
+        .search-box button:hover,
+        form button:hover,
+        #status button:hover {
+            background: #a81725
+        }
+
+        ul {
+            list-style: none;
+            padding: 0
+        }
+
+        ul li {
+            background: #eee;
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            border-left: 5px solid #bf1e2e
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            margin-top: 2rem
+        }
+
+        #offers {
+            background: #f0f8ff;
+            padding: 2rem 1rem
+        }
+
+        #offers h2 {
+            text-align: center;
+            margin-bottom: 1rem
+        }
+
+        #offers ul li {
+            border-left-color: #1e90ff
+        }
+
+        #offers .offer-card {
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            color: #333;
+            user-select: none
+        }
+
+        #offers .offer-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+        }
+
+        #offers .badge {
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #fff;
+            margin-left: 5px
+        }
+
+        .limited-time {
+            background: #ff4d4d
+        }
+
+        .best-value {
+            background: #007bff
+        }
+
+        .verified-id {
+            background: #28a745
+        }
+
+        .exclusive {
+            background: #6f42c1
+        }
+
+        #contact form {
+            max-width: 450px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        #contact form input,
+        #contact form textarea {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            font-family: inherit
+        }
+
+        #contact form button {
+            background: #bf1e2e;
+            color: #fff;
+            border: none;
+            padding: 0.7rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s
+        }
+
+        #contact form button:hover {
+            background: #a81725
+        }
+
+        #contact .confirmation-message {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 700;
+            color: green
+        }
+     #offers {
+        padding: 2rem 1rem
+    }
+
+    #offers h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #d62828
+    }
+
+    #offers .offer-card {
+        cursor: pointer;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+        color: white;
+        user-select: none;
+        transition: transform .3s, box-shadow .3s;
+        font-weight: 600
+    }
+
+    .offer-card.summer-special {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b)
+    }
+
+    .offer-card.group-booking {
+        background: linear-gradient(135deg, #6a11cb, #2575fc)
+    }
+
+    .offer-card.student-discount {
+        background: linear-gradient(135deg, #43cea2, #185a9d)
+    }
+
+    .offer-card.weekend-deal {
+        background: linear-gradient(135deg, #f7971e, #ffd200);
+        color: #333
+    }
+
+    .offer-card.senior-citizen {
+        background: linear-gradient(135deg, #283e51, #485563)
+    }
+
+    #offers .offer-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, .25)
+    }
+
+    .badge {
+        padding: 3px 8px;
+        border-radius: 8px;
+        font-size: .75rem;
+        font-weight: 700;
+        color: white;
+        margin-left: 6px;
+        vertical-align: middle
+    }
+
+    .limited-time {
+        background: #ff4d4d
+    }
+
+    .best-value {
+        background: #007bff
+    }
+
+    .verified-id {
+        background: #28a745
+    }
+
+    .exclusive {
+        background: #6f42c1
+    }
+
+    #offers .offer-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, .2)
+    }
+
+    .food-order-section {
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+        text-align: center
+    }
+
+    .food-order-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px
+    }
+
+    .food-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .food-item {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        width: 220px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .1)
+    }
+
+    .food-item img {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 10px
+    }
+
+    .food-item h3 {
+        font-size: 20px;
+        margin: 10px 0 5px
+    }
+
+    .food-item p {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px
+    }
+
+    .food-item input {
+        width: 50px;
+        padding: 5px;
+        margin-bottom: 10px
+    }
+
+    .food-item button {
+        padding: 8px 15px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer
+    }
+
+    .food-item button:hover {
+        background-color: #0056b3
+    }
